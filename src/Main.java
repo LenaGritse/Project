@@ -1,6 +1,10 @@
 import java.util.Arrays;
+import java.util.Random;
+import java.util.Scanner;
 
 public class Main {
+    static Scanner sc;
+    static Random random;
     public static void main(String[] args) {
 //тест заданий
        /* System.out.println(three(4,6,23,78));
@@ -10,13 +14,17 @@ public class Main {
         hello("Маша");
         whichYear(1265);*/
         //ДОМАШНЯЯ РАБОТА №2
-        invertArray();
+        /*invertArray();
         fillArray();
         changeArray();
         fillDiagonal();
         minMax();
         int[] arr = {3, 5, 4, 4};
-        System.out.println(checkBalance(arr));
+        System.out.println(checkBalance(arr));*/
+        //ДОМАШНЯЯ РАБОТА №3
+        sc = new Scanner(System.in);
+        random = new Random();
+        numsGame();
         //задание №2
        /* byte a;
         a = -120;
@@ -151,7 +159,7 @@ public class Main {
     }
 
     //задание №6
-    private static boolean checkBalance(int[] arr) {
+    public static boolean checkBalance(int[] arr) {
         int a;
         int b;
         for (int i = 0; i < arr.length + 1; i++) {
@@ -169,4 +177,39 @@ public class Main {
         }
         return false;
     }
+
+    //задание №7
+    public static int[] shiftArr(int[] arr, int n) {
+        int k = n % arr.length + arr.length;
+        for (int i = 0; i < k; i++) {
+            int tmp = arr[arr.length - 1];
+            for (int j = arr.length - 1; j > 0; j--) {
+                arr[j] = arr[j - 1];
+            }
+            arr[0] = tmp;
+        }
+        return arr;
+    }
+
+    //ДОМАШНЯЯ РАБОТА №3
+    //задание №1
+    public static void numsGame() {
+        do {
+            int answer = random.nextInt(10);
+            System.out.println("Попробуйте угадать число от 0 до 9. У Вас 3 попытки.");
+            for (int i = 3; i > 0; i--) {
+                System.out.println("Введите число: ");
+                int userAnswer = sc.nextInt();
+                if (userAnswer == answer) {
+                    System.out.println("Поздравляю! Вы угадали!");
+                    break;
+                }
+                System.out.println(userAnswer > answer ? "Указанное Вами число больше загаданного" : "Указанное Вами число меньше загаданного");
+                System.out.println((i-1) > 0 ? "Осталось попыток: " + (i-1) : "Вы использовали все попытки. Игра окончена.\nВерный ответ - " + answer);
+            }
+            System.out.println("Повторить игру еще раз? 1 – да / 0 – нет");
+        }
+        while (sc.nextInt() == 1);
+    }
+
 }
