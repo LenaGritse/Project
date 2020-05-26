@@ -346,11 +346,15 @@ public class Main {
         public static boolean checkLine(int y, int x, int lineY, int lineX, char c) {
             int X = x + (DOTS_TO_WIN - 1) * lineX;
             int Y = y + (DOTS_TO_WIN - 1) * lineY;
-            if (X < 0 || Y < 0 || X > SIZE - 1 || Y > SIZE - 1) return false;
+            if (X < 0 || Y < 0 || X > SIZE - 1 || Y > SIZE - 1) {
+                return false;
+            }
             for (int i = 0; i < DOTS_TO_WIN; i++) {
                 int a = y + i * lineY;
                 int b = x + i * lineX;
-                if (map[a][b] != c) return false;
+                if (map[a][b] != c) {
+                    return false;
+                }
             }
             return true;
         }
