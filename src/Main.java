@@ -6,6 +6,35 @@ public class Main {
     //static Scanner sc;
     //static Random random;
     public static void main(String[] args) {
+
+        /*
+        public class Person {
+
+    private String name;
+    private String position;
+    private String email;
+    private String phone;
+    private double salary;
+    private int age;
+
+    public Person(String name, String position, String email, String phone, double salary, int age) {
+        this.name = name;
+        this.position = position;
+        this.email = email;
+        this.phone = phone;
+        this.salary = salary;
+        this.age = age;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void info() {
+        System.out.println(name + " " + position + " " + email + " " + phone + " " + salary + " " + age);
+    }
+}
+         */
         Person[] persArray = new Person[5];
         persArray[0] = new Person("Иванов Иван Иванович", "менеджер", "ivanov@mail.ru", "111-11-11", 5000 , 41);
         persArray[1] = new Person("Петров Петр Петрович", "старший менеджер", "petrov@mail.ru", "222-22-22", 10000 , 42);
