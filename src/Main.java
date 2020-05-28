@@ -19,6 +19,7 @@ public class Main {
                 }
             }
 
+
 /*
         //тест заданий
         System.out.println(three(4,6,23,78));
