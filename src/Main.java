@@ -3,30 +3,74 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
-    static Scanner sc;
-    static Random random;
+    //static Scanner sc;
+    //static Random random;
     public static void main(String[] args) {
-//тест заданий
-       /* System.out.println(three(4,6,23,78));
+
+        /*
+        public class Person {
+
+    private String name;
+    private String position;
+    private String email;
+    private String phone;
+    private double salary;
+    private int age;
+
+    public Person(String name, String position, String email, String phone, double salary, int age) {
+        this.name = name;
+        this.position = position;
+        this.email = email;
+        this.phone = phone;
+        this.salary = salary;
+        this.age = age;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void info() {
+        System.out.println(name + " " + position + " " + email + " " + phone + " " + salary + " " + age);
+    }
+}
+         */
+        Person[] persArray = new Person[5];
+        persArray[0] = new Person("Иванов Иван Иванович", "менеджер", "ivanov@mail.ru", "111-11-11", 5000 , 41);
+        persArray[1] = new Person("Петров Петр Петрович", "старший менеджер", "petrov@mail.ru", "222-22-22", 10000 , 42);
+        persArray[2] = new Person("Сидоров Иван Петрович", "помощник менеджера", "sidorov@mail.ru", "333-33-33", 15000 , 40);
+        persArray[3] = new Person("Попова Мария Ивановна", "заместитель директора", "popova@mail.ru", "444-44-44", 20000 , 44);
+        persArray[4] = new Person("Федоров Федор Федорович", "директор", "fedorov@mail.ru", "555-55-55", 25000 , 45);
+
+            for (Person item : persArray) {
+                if (item.getAge() > 39) {
+                    item.info();
+                }
+            }
+
+
+/*
+        //тест заданий
+        System.out.println(three(4,6,23,78));
         System.out.println(four(4,5));
         five(73);
         System.out.println(six(73));
         hello("Маша");
-        whichYear(1265);*/
+        whichYear(1265);
         //ДОМАШНЯЯ РАБОТА №2
-        /*invertArray();
+        invertArray();
         fillArray();
         changeArray();
         fillDiagonal();
         minMax();
         int[] arr = {3, 5, 4, 4};
-        System.out.println(checkBalance(arr));*/
+        System.out.println(checkBalance(arr));
         //ДОМАШНЯЯ РАБОТА №3
-        sc = new Scanner(System.in);
-        random = new Random();
-        numsGame();
+        //sc = new Scanner(System.in);
+        //random = new Random();
+        //numsGame();
         //задание №2
-       /* byte a;
+       byte a;
         a = -120;
         short b;
         b = 12442;
@@ -41,7 +85,7 @@ public class Main {
         char g;
         g = 1067;
         boolean h;
-        h = false;*/
+        h = false;
     }
 
     //задание №3
@@ -357,5 +401,6 @@ public class Main {
             }
             return true;
         }
+    }*/
     }
 }
