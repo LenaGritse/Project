@@ -6,7 +6,15 @@ public class Main {
     //static Scanner sc;
     //static Random random;
     public static void main(String[] args) {
-
+        dog dog = new dog("Dog");
+        dog.run(350);
+        dog.swim(13);
+        cat cat = new cat("Cat");
+        cat.run(40);
+        cat.swim(10);
+        System.out.println("Количество животных: " + animal.count);
+        dog.getMax();
+        cat.getMax();
         /*
         public class Person {
 
@@ -35,7 +43,7 @@ public class Main {
     }
 }
          */
-        Person[] persArray = new Person[5];
+        /*Person[] persArray = new Person[5];
         persArray[0] = new Person("Иванов Иван Иванович", "менеджер", "ivanov@mail.ru", "111-11-11", 5000 , 41);
         persArray[1] = new Person("Петров Петр Петрович", "старший менеджер", "petrov@mail.ru", "222-22-22", 10000 , 42);
         persArray[2] = new Person("Сидоров Иван Петрович", "помощник менеджера", "sidorov@mail.ru", "333-33-33", 15000 , 40);
@@ -46,7 +54,7 @@ public class Main {
                 if (item.getAge() > 39) {
                     item.info();
                 }
-            }
+            }*/
 
 
 /*
