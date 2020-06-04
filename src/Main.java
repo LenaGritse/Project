@@ -3,10 +3,35 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
+
     //static Scanner sc;
     //static Random random;
     public static void main(String[] args) {
-        dog dog = new dog("Dog");
+
+        Cats[] cats = {
+                new Cats("Murzik", 50),
+                new Cats("Barsik", 50),
+                new Cats("Tigr", 50),
+        };
+
+        plate plate = new plate(100);
+
+        for(Cats itemCat:cats) {
+            itemCat.eat(plate);
+            itemCat.info();
+        }
+
+        plate.addFood(50);
+
+        plate.info();
+
+        cats[2].eat(plate);
+
+        cats[2].info();
+
+        plate.info();
+
+        /*dog dog = new dog("Dog");
         dog.run(350);
         dog.swim(13);
         cat cat = new cat("Cat");
@@ -15,7 +40,7 @@ public class Main {
         System.out.println("Количество животных: " + animal.count);
         dog.getMax();
         cat.getMax();
-        /*
+
         public class Person {
 
     private String name;
